@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="209dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oops"
+            android:fontFamily="@font/akzidenz_grotesk_next_medium"
+            android:textSize="20sp"
+            android:id="@+id/tv_oops"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="23dp"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_oops"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="23dp"
+            android:fontFamily="@font/akzidenz_grotesk_next_regular"
+            android:textSize="16sp"
+            android:lineHeight="22sp"
+            android:textColor="@color/grey_dark_2"
+            android:text="Something went wrong."/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:text="OK"
+            android:fontFamily="@font/akzidenz_grotesk_next_medium_extd"
+            android:id="@+id/tv_ok"
+            android:textColor="@color/blue"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="26dp"/>
+
+
+
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

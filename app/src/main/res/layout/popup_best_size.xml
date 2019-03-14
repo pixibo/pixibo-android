@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For this item, you’ll look best in"
+            android:id="@+id/tv_bra_size"
+            android:fontFamily="@font/akzidenz_grotesk_next_regular_extd"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <View
+            android:background="@color/black"
+            android:layout_width = "match_parent"
+            android:id="@+id/view"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_below="@+id/tv_bra_size"/>
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:id="@+id/rg_fit"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_below="@+id/view">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_a"
+                android:fontFamily="@font/akzidenz_grotesk_next_regular_extd"
+                android:button="@drawable/radio_button"
+                android:textSize="12sp"
+                android:gravity="center_vertical"
+                android:text="S"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginBottom="15dp"
+                />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_b"
+                android:fontFamily="@font/akzidenz_grotesk_next_regular_extd"
+                android:button="@drawable/radio_button"
+                android:textSize="12sp"
+                android:gravity="center_vertical"
+                android:text="M"
+                android:layout_marginBottom="15dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_c"
+                android:fontFamily="@font/akzidenz_grotesk_next_regular_extd"
+                android:button="@drawable/radio_button"
+                android:textSize="12sp"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="3dp"
+                android:text="L"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"/>
+
+
+        </RadioGroup>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

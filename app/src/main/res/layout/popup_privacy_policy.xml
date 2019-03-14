@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="214dp"
+    android:layout_height="125dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_pixibo_logo"
+            android:text="PIXIBO LOGO"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_pixibo_logo"
+            android:textColor="@color/black"
+            android:id="@+id/tv_description"
+            android:textSize="12sp"
+            android:fontFamily="@font/akzidenz_grotesk_next_regular"
+            android:layout_marginTop="10dp"
+            android:text="Pixibo will not share or disclose your personal information to anyone."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_description"
+            android:text="Privacy Policy"
+            android:textSize="12sp"
+            android:textColor="@color/blue"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            style=""
+            android:id="@+id/tv_privacy_policy"/>
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:background="@drawable/popup_corner" />
+</RelativeLayout>

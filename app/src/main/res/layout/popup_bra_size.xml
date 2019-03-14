@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bra size"
+        android:id="@+id/tv_bra_size"
+        android:fontFamily="@font/akzidenz_grotesk_next_regular_extd"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="true"/>
+
+    <View
+        android:background="@color/grey"
+        android:layout_width = "match_parent"
+        android:id="@+id/view"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@+id/tv_bra_size"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/radio_gp_bra"
+        android:layout_marginBottom="16dp"
+        android:checkedButton="@+id/radio_uk"
+        android:layout_below="@+id/view">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_uk"
+            android:fontFamily="@font/akzidenz_grotesk_next_regular_extd"
+            android:button="@drawable/radio_button"
+            android:textSize="12sp"
+            android:gravity="center_vertical"
+            android:text="UK"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:layout_marginBottom="15dp"
+            />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_eu"
+            android:fontFamily="@font/akzidenz_grotesk_next_regular_extd"
+            android:button="@drawable/radio_button"
+            android:textSize="12sp"
+            android:gravity="center_vertical"
+            android:text="EU"
+            android:layout_marginBottom="15dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_au"
+            android:fontFamily="@font/akzidenz_grotesk_next_regular_extd"
+            android:button="@drawable/radio_button"
+            android:textSize="12sp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="15dp"
+            android:text="AU"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_fr"
+            android:fontFamily="@font/akzidenz_grotesk_next_regular_extd"
+            android:button="@drawable/radio_button"
+            android:textSize="12sp"
+            android:gravity="center_vertical"
+            android:text="FR"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"/>
+
+    </RadioGroup>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main.CalculatedSizeActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        android:id="@+id/card_header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/layout_header"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/tv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="15.5dp"
+                android:drawableStart="@drawable/ic_back"
+                android:padding="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_toEndOf="@+id/tv_back"
+                android:fontFamily="@font/akzidenz_grotesk_next_medium_extd"
+                android:padding="2dp"
+                android:text="Your size"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/card_header"
+        android:fillViewport="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:visibility="gone"
+                android:id="@+id/layout_out_of_stock">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="Sorry, this item is out of stock in this size"
+                    android:fontFamily="@font/akzidenz_grotesk_next_medium_extd"
+                    android:textColor="@color/white"/>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="40dp"
+                android:id="@+id/tv_item_fit"
+                android:layout_below="@+id/layout_out_of_stock"
+                android:fontFamily="@font/akzidenz_grotesk_next_medium_extd"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:text="For this item, you’ll look best in"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size S"
+                android:textColor="@color/black"
+                android:layout_below="@+id/tv_item_fit"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="16dp"
+                android:id="@+id/tv_best_size"
+                android:textSize="50sp"
+                android:drawableEnd="@drawable/ic_down"
+                android:drawablePadding="32dp"
+                android:fontFamily="@font/akzidenz_grotesk_next_medium_extd"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:fontFamily="@font/akzidenz_grotesk_next_medium_extd"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:id="@+id/tv_closest_fit"
+                android:layout_below="@+id/tv_best_size"
+                android:text="is closest to your size"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_below="@+id/tv_closest_fit"
+                android:id="@+id/tv_pref_fit"
+                android:text="Your preferred fit:"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/akzidenz_grotesk_next_regular_extd"
+                android:layout_marginTop="20dp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/tv_closest_fit"
+                android:layout_toEndOf="@+id/tv_pref_fit"
+                android:text="regular"
+                android:textAllCaps="true"
+                android:textColor="@color/blue"
+                android:textSize="12sp"
+                android:id="@+id/tv_pref_fit_value"
+                android:fontFamily="@font/akzidenz_grotesk_next_medium_extd"
+                android:layout_marginTop="20dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="56dp"
+                android:id="@+id/tv_fit_confidence"
+                android:layout_below="@+id/tv_pref_fit_value"
+                android:fontFamily="@font/akzidenz_grotesk_next_medium_extd"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:text="Fit Confidence"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_fit_confidence"
+                android:id="@+id/layout_fit_confidence"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="8dp"
+                >
+
+                <ImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:id="@+id/iv_terrible"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_terrible_disable"/>
+
+                <ImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:id="@+id/iv_very_bad"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_very_bad_disable"/>
+
+                <ImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:id="@+id/iv_okay"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_okay_disable"/>
+
+                <ImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:id="@+id/iv_love_it"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_love_it_disable"/>
+
+                <ImageView
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:id="@+id/iv_amazing"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_amazing_disable"/>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:layout_marginTop="40dp"
+                android:id="@+id/layout_fit_toggle"
+                android:layout_below="@+id/layout_fit_confidence">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_fit_how"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/akzidenz_grotesk_next_medium_extd"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="See how this item fits"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:id="@+id/tv_fit_toggle"
+                    android:layout_alignParentEnd="true"
+                    android:drawableEnd="@drawable/ic_expand_down"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_fit_toggle"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:visibility="gone"
+                android:id="@+id/layout_fit"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="bust"
+                        android:layout_alignParentStart="true"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/akzidenz_grotesk_next_regular_extd"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="Ideal Fit"
+                        android:id="@+id/tv_bust_fit"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/akzidenz_grotesk_next_regular_extd"
+
+                        />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="waist"
+                        android:layout_alignParentStart="true"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/akzidenz_grotesk_next_regular_extd"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="Relaxed Fit"
+                        android:id="@+id/tv_waist_fit"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/akzidenz_grotesk_next_regular_extd"
+
+                        />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="hips"
+                        android:layout_alignParentStart="true"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/akzidenz_grotesk_next_regular_extd"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_hips_fit"
+                        android:layout_alignParentEnd="true"
+                        android:text="Too Loose"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/akzidenz_grotesk_next_regular_extd"
+
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:background="@color/grey"
+                android:layout_width = "match_parent"
+                android:id="@+id/view"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="80dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_below="@+id/layout_fit"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:text="go back"
+                    android:textAllCaps="true"
+                    android:id="@+id/bt_go_back"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    android:visibility="gone"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/akzidenz_grotesk_next_medium_extd"
+                    android:background="@drawable/bg_button_border_grey"
+                    />
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:text="start over"
+                    android:textAllCaps="true"
+                    android:id="@+id/bt_start_over"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/akzidenz_grotesk_next_medium_extd"
+                    android:background="@drawable/bg_button_border_grey"
+                    />
+
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:text="Add to bag"
+                    android:id="@+id/bt_add_bag"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/akzidenz_grotesk_next_medium_extd"
+                    android:background="@drawable/bg_button_fill_blue_no_corner"/>
+
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:text="notify me"
+                    android:id="@+id/bt_notify"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:visibility="gone"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/akzidenz_grotesk_next_medium_extd"
+                    android:background="@drawable/bg_button_fill_blue_no_corner"/>
+
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:text="Continue Shopping"
+                    android:id="@+id/bt_continue"
+                    android:textAllCaps="true"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/akzidenz_grotesk_next_medium_extd"
+                    android:background="@drawable/bg_button_fill_blue_no_corner"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
